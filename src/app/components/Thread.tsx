@@ -31,6 +31,7 @@ export function Thread({ query, onNewSearch }: ThreadProps) {
   const [inputValue, setInputValue] = useState("");
   const [answer, setAnswer] = useState("");
   const [sources, setSources] = useState<SourceChunk[]>([]);
+  const [ocrText, setOcrText] = useState("");
   const [loading, setLoading] = useState(false);
 
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -48,6 +49,8 @@ export function Thread({ query, onNewSearch }: ThreadProps) {
 
       setAnswer(res.answer || "No answer returned.");
       setSources(res.sources || []);
+      setOcrText(res.ocr_text || "");
+
 
       onNewSearch(inputValue);
       setInputValue("");

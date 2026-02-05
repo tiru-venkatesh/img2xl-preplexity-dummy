@@ -154,6 +154,22 @@ export function Thread({ query, onNewSearch }: ThreadProps) {
               )}
             </div>
 
+            {ocrText && (
+  <div className="mt-6">
+    <h3 className="text-sm font-semibold mb-2">
+      OCR Raw Text
+    </h3>
+
+    <div className="p-3 bg-gray-100 dark:bg-[#202222] 
+                    rounded-lg border text-xs 
+                    whitespace-pre-wrap max-h-80 
+                    overflow-y-auto">
+      {ocrText}
+    </div>
+  </div>
+)}
+
+
             {/* ======================= Related ======================= */}
 
             <div className="pt-4 border-t">

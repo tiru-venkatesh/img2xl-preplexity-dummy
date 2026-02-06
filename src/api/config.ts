@@ -1,2 +1,2 @@
-export const API_BASE_URL =
-  "https://img2xl-backend-3-production.up.railway.app";
+// src/api/config.ts
+export const API_BASE_URL = "http://localhost:8000";
